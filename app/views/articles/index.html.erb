@@ -1,0 +1,38 @@
+<div class="pageHeadline" style="background-image:url('<%=image_url 'ruby.jpg'%>'); width:100%;">
+  <h2 style="color: #ffffff">Blog...</h2>
+</div>
+<section class="articleArchiv">
+  <ul class="sameHeight">
+    <%@articles.limit(6).reverse_order!.each do |article|%>
+        <li class="wow animated zoomIn" data-wow-delay=".15s">
+          <%= link_to  article do %>
+              <span class="date"><%="#{time_ago_in_words(article.created_at)} ago"%></span>
+            <h2><%=article.title%></h2>
+            <div class="readMore">Read Article<i class="icon icon-arrow-right"></i></div>
+          <%end%>
+        </li>
+    <%end%>
+  </ul>
+  <a href="#articleList" class="scrollDown scrollDown--index" id="articleList">
+    <i class="icon icon-arrow-bottom"></i>See Article list
+  </a>
+</section>
+
+<section class="articleArchivList">
+  <%@articles.each do |article|%>
+
+<ul>
+    <li>
+      <%= link_to  article do %>
+        <span class="date"><%="#{time_ago_in_words(article.created_at)} ago"%></span>
+        <h2><%= article.title%></h2>
+        <i class="icon icon-arrow-right"></i>
+      <%end%>
+    </li>
+  </ul>
+      <%end%>
+  <div class="pagination">
+    <div class="alignleft"><a href="http://davidhellmann.com/blog/page/2/" ><i class="icon icon-arrow-left"></i> Older</a></div>
+    <div class="alignright"></div>
+  </div>
+</section>

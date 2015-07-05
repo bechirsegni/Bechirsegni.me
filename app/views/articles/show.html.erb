@@ -1,0 +1,26 @@
+<section class="pageHeadline">
+  <h2><%= @article.title %><span class="date"><span><%="#{time_ago_in_words(@article.created_at)} ago"%></span></span></h2>
+</section>
+<section class="blogDetailWrapper">
+  <article class="articleWrapper">
+    <p>
+      Reading duration : <strong><%= @article.duration %>.</strong><br>
+      Tags :
+      <strong>
+        <a href="http://oachoor.me/blog/tag/shell">Shell</a>,                                                    <a href="http://oachoor.me/blog/tag/symfony">Symfony</a>                                            </strong>
+      <br><br>
+    </p>
+
+    <p class="leadin">  <%= @article.description %></p>
+
+    <div class="sharing">
+      <a target="_blank" title="Diesen Beitrag twittern" href="http://twitter.com/home?status=Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae sollicitudin tellus. Donec ornare ligula at risus gravida, nec luctus nunc pellentesque. Vestibulum auctor dolor eros, eu commodo leo porttitor id. Morbi in blandit dolor, at mattis sem. Mauris ac rutrum purus, vel malesuada magna. Suspendisse vel felis quis elit ornare congue ac ac sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. &mdash; http://oachoor.me/shell-script-to-simplify-life via @oachoor" class="icon icon-twitter"></a>
+      <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://oachoor.me/shell-script-to-simplify-life" class="icon icon-facebook"></a>
+      <a target="_blank" href="https://plus.google.com/share?url=http://oachoor.me/shell-script-to-simplify-life" class="icon icon-googleplus"></a>
+    </div>
+  </article>
+  <div class="pagination">
+    <div class="alignleft"><a rel="prev" href="/"><i class="icon lessMargin icon-arrow-left"></i> PREVIOUS POST</a></div>
+    <div class="alignright"><a rel="next" href="/">NEXT POST <i class="icon lessMargin icon-arrow-right"></i></a></div>
+  </div>
+</section>
