@@ -20,11 +20,14 @@
 
 
 <section class="searchBox js_searchBox">
-  <form method="get" action="/search">
-    <i class="icon icon-search"></i>
-    <a href="#closeSearch" class="js_showSearch"><i class="icon icon-close"></i></a>
-    <input placeholder="Search..." name="q" class="searchInput" id="s"><input type="submit" class="submit" value="Search">
-  </form>
+  <%= form_tag articles_path, :method => 'get' do %>
+      <i class="icon icon-search"></i>
+      <a href="#closeSearch" class="js_showSearch"><i class="icon icon-close"></i></a>
+      <%= text_field_tag :search, params[:search],class:'searchInput' ,placeholder:'Search...' do %>
+          <i class="icon icon-close"></i>
+      <%end%>
+      <% submit_tag "Search" %>
+  <% end %>
 </section>
 
 <div class="mobileNavWrapper">

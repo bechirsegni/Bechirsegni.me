@@ -9,12 +9,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
-gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'newrelic_rpm'
 gem 'disqus', '~> 1.0.4'
 gem 'will_paginate', '~> 3.0.7'
+gem 'paperclip', '~> 4.3.0'
 
 group :development, :test do
+  gem 'better_errors', '~> 2.1.1'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'

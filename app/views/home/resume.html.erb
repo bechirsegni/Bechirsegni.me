@@ -6,7 +6,7 @@
   <section class="experience">
     <div class="headline">PROFESSIONAL EXPERIENCE</div>
     <ul>
-      <%@experiences.each do |experience|%>
+      <%@experiences.reverse_order!.each do |experience|%>
       <li>
         <div class="company">
           <h2><%= experience.company%></h2>
@@ -25,7 +25,7 @@
   <section class="experience">
     <div class="headline">EDUCATION & CERTIFICATIONS</div>
     <ul>
-      <%@educations.each do |education|%>
+      <%@educations.reverse_order!.each do |education|%>
       <li>
         <div class="company">
           <h2 title="National Conservatory of Arts and Crafts"><%= education.university%></h2>

@@ -2,6 +2,7 @@
 <div class="pageHeadline" style="background-image:url('<%=image_url 'ruby.jpg'%>'); width:100%;">
   <h2 style="color: #ffffff">Blog...</h2>
 </div>
+
 <section class="articleArchiv">
   <ul class="sameHeight">
     <%@articles.limit(6).reverse_order!.each do |article|%>
@@ -15,12 +16,11 @@
     <%end%>
   </ul>
   <a href="#articleList" class="scrollDown scrollDown--index" id="articleList">
-    <i class="icon icon-arrow-bottom"></i>See Article list
-  </a>
+    <i class="icon icon-arrow-bottom"></i>See Article list </a>
 </section>
 
 <section class="articleArchivList">
-  <%@articles.each do |article|%>
+  <%@articles.reverse_order.each do |article|%>
 
 <ul>
     <li>
@@ -30,8 +30,10 @@
         <i class="icon icon-arrow-right"></i>
       <%end%>
     </li>
-  </ul>
-      <%end%>
+</ul>
+  <%end%>
+
   <div class="pagination">
-    <%= will_paginate @articles %>  </div>
+    <%= will_paginate @articles %>
+  </div>
 </section>
