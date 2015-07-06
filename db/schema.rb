@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704233200) do
+ActiveRecord::Schema.define(version: 20150705224119) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -52,6 +52,28 @@ ActiveRecord::Schema.define(version: 20150704233200) do
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.text     "description", limit: 65535
+    t.string   "university",  limit: 255
+    t.string   "duration",    limit: 255
+    t.string   "url",         limit: 255
+    t.integer  "user_id",     limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.text     "description", limit: 65535
+    t.string   "company",     limit: 255
+    t.string   "duration",    limit: 255
+    t.string   "url",         limit: 255
+    t.integer  "user_id",     limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "intros", force: :cascade do |t|
@@ -121,6 +143,13 @@ ActiveRecord::Schema.define(version: 20150704233200) do
   end
 
   add_index "services", ["admin_id"], name: "index_services_on_admin_id", using: :btree
+
+  create_table "technologies", force: :cascade do |t|
+    t.string   "skill",      limit: 255
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

@@ -4,8 +4,12 @@ class HomeController < ApplicationController
   end
 
   def about
+    @technologies = Technology.all
   end
 
   def resume
+    @educations = Education.all
+    @experiences = Experience.all
+    @technologies = Technology.all
   end
 end

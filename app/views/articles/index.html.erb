@@ -1,3 +1,4 @@
+<% provide(:title, "Blog") %>
 <div class="pageHeadline" style="background-image:url('<%=image_url 'ruby.jpg'%>'); width:100%;">
   <h2 style="color: #ffffff">Blog...</h2>
 </div>
@@ -32,7 +33,5 @@
   </ul>
       <%end%>
   <div class="pagination">
-    <div class="alignleft"><a href="http://davidhellmann.com/blog/page/2/" ><i class="icon icon-arrow-left"></i> Older</a></div>
-    <div class="alignright"></div>
-  </div>
+    <%= will_paginate @articles %>  </div>
 </section>

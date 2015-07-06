@@ -1,3 +1,4 @@
+<% provide(:title, "About") %>
 <div class="pageHeadline" style="background-image:url('<%=image_url 'stay.jpg'%>'); width:100%;">
   <h2 style="color: #ffffff">About Me...</h2>
 </div>
@@ -5,7 +6,7 @@
 <section class="aboutWrapper">
   <section class="introSection">
     <h2>
-      Hi, I'm Omar!<br>
+      Hi, I'm Bechir!<br>
       Web Developer<br>
       <span>but it's not just a hobby...</span>
     </h2>
@@ -17,8 +18,10 @@
     <p>I create this site to share what I learn, my findings and my experience. It's not been made with Wordpress :D, so I talk about Drupal and develops almost all the time. Whether in my personal life and in my professional life to meet the needs of my clients, the important thing is not to use the technology or the tool that I like most, but to use the one that meets best needed.</p>
   </section>
   <section class="likes">
-    <div class="headline">PROFESSIONAL SKILLS</div>
-    <p>Hello</p>
+    <div class="headline">Technologies</div>
+    <%@technologies.each do |t|%>
+        <p><%=t.skill%></p>
+    <%end%>
   </section>
   <section class="articleArchiv">
     <a href="https://twitter.com/bechirsegni" target="_blank" class="scrollDown LatestTweets">

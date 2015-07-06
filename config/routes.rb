@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get 'about' , to: 'home#about'
   get 'resume' , to: 'home#resume'
   resources :articles
+  resources :educations
+  resources :experiences
+  resources :technologies
 end

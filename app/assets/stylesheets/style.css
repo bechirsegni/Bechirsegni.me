@@ -262,6 +262,7 @@ textarea {
 .icon-tumblr:before {
     content: "\e607"
 }
+
 @-webkit-keyframes loadingPulse {
     from {
         opacity: .25
@@ -450,7 +451,7 @@ a {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #384452
+    color: #1F1F1F
 }
 .pagination .alignleft .icon {
     float: left;
@@ -463,7 +464,7 @@ a {
     text-align: center;
     padding: 0 2px 0 0;
     margin: 30px 10px 0 40px;
-    color: #384452;
+    color: #1F1F1F;
     -webkit-transition: all .25s 0s ease;
     transition: all .25s 0s ease
 }
@@ -484,7 +485,7 @@ a {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #384452
+    color: #1F1F1F
 }
 .pagination .alignright .icon {
     float: right;
@@ -497,7 +498,7 @@ a {
     text-align: center;
     padding: 0 0 0 2px;
     margin: 30px 40px 0 10px;
-    color: #384452;
+    color: #1F1F1F;
     -webkit-transition: all .25s 0s ease;
     transition: all .25s 0s ease
 }
@@ -505,7 +506,7 @@ a {
     margin: 30px 20px 0 10px
 }
 .pagination a:hover .icon {
-    border: 2px solid #384452
+    border: 2px solid #1F1F1F
 }
 #imagelightbox-overlay {
     background-color: rgba(39, 47, 56, 0.95);
@@ -631,9 +632,9 @@ a {
     }
 }
 .websiteHeader.dark {
-    background: rgba(56, 68, 82, 0.98);
-    -webkit-box-shadow: 0 2px 0 #272f38;
-    box-shadow: 0 2px 0 #272f38
+    background: #1F1F1F;
+    -webkit-box-shadow: 0 2px 0 #1F1F1F;
+    box-shadow: 0 2px 0 #1F1F1F
 }
 .websiteHeader .websiteNav {
     width: 100%;
@@ -660,7 +661,7 @@ a {
     padding: 0 15px
 }
 .websiteHeader .websiteNav a:hover {
-    background: rgba(39, 47, 56, 0.9)
+    background: #333333
 }
 .websiteHeader .websiteNav a.active {
     background: #272f38
@@ -730,7 +731,7 @@ a {
     top: -100px;
     left: 0;
     position: fixed;
-    background: rgba(56, 68, 82, 0.98);
+    background: #1F1F1F;
     -webkit-box-shadow: 0 2px 0 #272f38;
     box-shadow: 0 2px 0 #272f38;
     z-index: 99999;
@@ -770,7 +771,7 @@ a {
     padding: 0 15px
 }
 .websiteHeaderSticky .websiteNav a:hover {
-    background: rgba(39, 47, 56, 0.9)
+    background:#333333;
 }
 .websiteHeaderSticky .websiteNav a.active {
     background: #272f38
@@ -978,7 +979,7 @@ a {
     width: 100%;
     float: left;
     clear: both;
-    background: #384452;
+    background: #1F1F1F;
     -webkit-transition: all .5s 0s ease;
     transition: all .5s 0s ease
 }
@@ -1044,13 +1045,13 @@ a {
 .websiteFooter .footerContent .socialIcons li a .icon {
     border-radius: 80px;
     font-size: 30px;
-    border: 2px solid #272f38;
+    border: 2px solid #333333;
     text-align: center;
     padding: 18px;
     float: left;
     display: block;
     color: #fff;
-    background: #272f38;
+    background: #333333;
     -webkit-transition: all .25s 0s ease;
     transition: all .25s 0s ease
 }
@@ -1078,7 +1079,7 @@ a {
     line-height: 48px;
     font-size: 16px;
     background: #fff;
-    color: #384452
+    color: #1F1F1F
 }
 .welcomeWrapper {
     width: 100%;
@@ -1174,7 +1175,7 @@ a {
     height: 100px;
     line-height: 98px;
     text-align: center;
-    color: #384452;
+    color: #1F1F1F;
     background: #fff;
     font-size: 13px;
     font-weight: 700;
@@ -1196,7 +1197,7 @@ a {
     transition: all .25s 0s ease
 }
 .welcomeWrapper .scrollDown:hover .icon {
-    border: 2px solid #384452
+    border: 2px solid #1F1F1F
 }
 .articleArchiv {
     float: left;
@@ -1253,7 +1254,7 @@ a {
     }
 }
 .articleArchiv ul li a:hover {
-    background: #272f38
+    background: #1F1F1F
 }
 .articleArchiv ul li a .date {
     color: #687788;
@@ -1265,7 +1266,7 @@ a {
     float: left;
     clear: both;
     width: 100%;
-    color: #384452;
+    color: #1F1F1F;
     font-family: "museo-sans", sans-serif;
     font-size: 32px;
     line-height: 40px;
@@ -1298,7 +1299,7 @@ a {
     bottom: 2px;
     left: 40px;
     right: 40px;
-    color: #384452;
+    color: #1F1F1F;
     font-size: 13px;
     font-weight: 700;
     font-family: "museo-sans", sans-serif;
@@ -1325,7 +1326,7 @@ a {
     right: 0;
     top: 20px;
     padding: 0 0 0 2px;
-    color: #384452;
+    color: #1F1F1F;
     -webkit-transition: all .25s 0s ease;
     transition: all .25s 0s ease
 }
@@ -1348,7 +1349,7 @@ a {
     height: 40px;
     line-height: 40px;
     color: #fff;
-    background: #384452;
+    background: #1F1F1F;
     padding: 0 20px;
     font-family: "museo-sans", sans-serif;
     font-weight: 700;
@@ -1370,7 +1371,7 @@ a {
     height: 100px;
     line-height: 98px;
     text-align: center;
-    color: #384452;
+    color: #1F1F1F;
     background: #fff;
     font-size: 13px;
     font-weight: 700;
@@ -1394,7 +1395,7 @@ a {
     transition: all .25s 0s ease
 }
 .articleArchiv .scrollDown:hover .icon {
-    border: 2px solid #384452
+    border: 2px solid #1F1F1F
 }
 .articleArchivList {
     float: left;
@@ -1425,7 +1426,6 @@ a {
     float: left;
     display: block;
     padding: 40px 120px 40px 40px;
-    background: #fff;
     width: 100%;
     height: 100%;
     position: relative;
@@ -1444,7 +1444,7 @@ a {
     }
 }
 .articleArchivList ul li a:hover {
-    background: #272f38
+    background: #1F1F1F;
 }
 .articleArchivList ul li a .icon {
     border-radius: 40px;
@@ -1459,7 +1459,7 @@ a {
     top: 50%;
     margin: -20px 0 0 0;
     padding: 0 0 0 2px;
-    color: #384452;
+    color: #1F1F1F;
     -webkit-transition: all .25s 0s ease;
     transition: all .25s 0s ease
 }
@@ -1483,7 +1483,7 @@ a {
 .articleArchivList ul li a h2 {
     float: left;
     width: 100%;
-    color: #384452;
+    color: #1F1F1F;
     font-family: "museo-sans", sans-serif;
     font-size: 32px;
     line-height: 40px;
