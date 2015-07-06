@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150706035521) do
+ActiveRecord::Schema.define(version: 20150706062535) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20150706035521) do
     t.datetime "image_updated_at"
   end
 
+  add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
+
   create_table "blogs", force: :cascade do |t|
     t.string   "title",              limit: 255
     t.date     "date"
@@ -69,6 +71,8 @@ ActiveRecord::Schema.define(version: 20150706035521) do
     t.datetime "updated_at",                null: false
   end
 
+  add_index "educations", ["user_id"], name: "index_educations_on_user_id", using: :btree
+
   create_table "experiences", force: :cascade do |t|
     t.string   "title",       limit: 255
     t.text     "description", limit: 65535
@@ -79,6 +83,8 @@ ActiveRecord::Schema.define(version: 20150706035521) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
+
+  add_index "experiences", ["user_id"], name: "index_experiences_on_user_id", using: :btree
 
   create_table "intros", force: :cascade do |t|
     t.string   "title",                  limit: 255
@@ -154,6 +160,8 @@ ActiveRecord::Schema.define(version: 20150706035521) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  add_index "technologies", ["user_id"], name: "index_technologies_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

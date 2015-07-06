@@ -5,7 +5,7 @@
 
 <section class="articleArchiv">
   <ul class="sameHeight">
-    <%@articles.limit(6).reverse_order!.each do |article|%>
+    <%@articles.limit(9).reverse_order!.each do |article|%>
         <li class="wow animated zoomIn" data-wow-delay=".15s">
           <%= link_to  article do %>
               <span class="date"><%="#{time_ago_in_words(article.created_at)} ago"%></span>
@@ -15,25 +15,11 @@
         </li>
     <%end%>
   </ul>
-  <a href="#articleList" class="scrollDown scrollDown--index" id="articleList">
-    <i class="icon icon-arrow-bottom"></i>See Article list </a>
-</section>
-
-<section class="articleArchivList">
-  <%@articles.reverse_order.each do |article|%>
-
-<ul>
-    <li>
-      <%= link_to  article do %>
-        <span class="date"><%="#{time_ago_in_words(article.created_at)} ago"%></span>
-        <h2><%= article.title%></h2>
-        <i class="icon icon-arrow-right"></i>
-      <%end%>
-    </li>
-</ul>
-  <%end%>
-
   <div class="pagination">
     <%= will_paginate @articles %>
   </div>
+  <a href="https://twitter.com/bechirsegni" target="_blank" class="scrollDown LatestTweets">
+    <i class="icon icon-twitter"></i>
+  </a>
 </section>
+

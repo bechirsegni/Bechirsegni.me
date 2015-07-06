@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_filter :correct_user, only: [:edit, :update, :destroy]
 
   def index
-  @articles = Article.all.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+  @articles = Article.all.search(params[:search]).paginate(:page => params[:page], :per_page => 9)
   end
 
   def show
