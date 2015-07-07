@@ -41,15 +41,15 @@ class ArticlesController < ApplicationController
 
   private
   def set_article
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
   end
 
   def article_params
-    params.require(:article).permit(:title, :description, :duration,:image)
+    params.require(:article).permit(:title, :description, :duration,:image,:slug)
   end
 
   def correct_user
-    @article = current_user.articles.find_by_id(params[:id])
+    @article = current_user.articles.friendly.find(params[:id])
     redirect_to articles_path, notice: "Not authorized to edit this Post" if @article.nil?
   end
 end

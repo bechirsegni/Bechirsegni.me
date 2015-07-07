@@ -664,7 +664,7 @@ a {
     background: #333333
 }
 .websiteHeader .websiteNav a.active {
-    background: #272f38
+    background: #1F1F1F
 }
 .websiteHeader .websiteNav h1 {
     float: left
@@ -839,7 +839,7 @@ a {
 .searchBox {
     position: fixed;
     z-index: 88888;
-    background: #272f38;
+    background: #1F1F1F;
     border-top: 60px solid rgba(56, 68, 82, 0.5);
     width: 100%;
     height: 160px;
@@ -1892,7 +1892,7 @@ a {
 }
 @media only screen and (max-width: 1160px) {
     .aboutWrapper {
-        padding: 260px 0 0 0
+        padding: 110px 0 0 0
     }
 }
 .aboutWrapper .introSection {
