@@ -6,10 +6,11 @@
   <article class="articleWrapper">
     <p>
       Reading duration : <strong><%= @article.duration %></strong><br>
+      <%if @article.tag_list.present?%>
       Tags :
       <strong>
-        <a href="http://oachoor.me/blog/tag/shell">Shell</a>,
-        <a href="http://oachoor.me/blog/tag/symfony">Symfony</a>
+        <%= raw @article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+        <%end%>
       </strong>
       <br><br>
     </p>

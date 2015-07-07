@@ -4,7 +4,11 @@ class ArticlesController < ApplicationController
   before_filter :correct_user, only: [:edit, :update, :destroy]
 
   def index
+    if params[:tag]
+      @articles = Article.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 9)
+    else
   @articles = Article.all.search(params[:search]).paginate(:page => params[:page], :per_page => 9)
+      end
   end
 
   def show
@@ -45,7 +49,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :description, :duration,:image,:slug)
+    params.require(:article).permit(:title, :description, :duration,:image,:slug,:tag_list)
   end
 
   def correct_user

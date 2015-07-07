@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
+
   devise_for :users
-  root 'home#index'
+  devise_scope :user do
+    get 'admin', :to => 'devise/sessions#new'
+    post 'admin', :to => 'devise/sessions#new'
+    get 'register', :to => 'devise/registrations#new'
+    post 'register', :to => 'devise/registrations#new'
+    get 'logout', to: 'devise/sessions#destroy'
+    get 'password', to: 'devise/passwords#new'
+    get 'account', to: 'devise/registrations#edit'
+  end
+
   get 'about' , to: 'home#about'
   get 'resume' , to: 'home#resume'
   resources :articles
+  get 'tags/:tag', to: 'articles#index', as: :tag
   resources :educations
   resources :experiences
   resources :technologies
+
+  root 'home#index'
+
 end

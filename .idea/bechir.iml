@@ -132,6 +132,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.2.3, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.2.3, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.2.3, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="acts-as-taggable-on (v3.5.0, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v6.0.0, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.10, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="better_errors (v2.1.1, RVM: ruby-2.2.1 [global]) [gem]" level="application" />

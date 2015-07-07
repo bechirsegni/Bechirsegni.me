@@ -16,6 +16,7 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'paperclip', '~> 4.3.0'
 gem 'modernizr-rails', '~> 2.7.1'
 gem 'friendly_id', '~> 5.1.0'
+gem 'acts-as-taggable-on', '~> 3.5.0'
 
 group :development, :test do
   gem 'better_errors', '~> 2.1.1'
