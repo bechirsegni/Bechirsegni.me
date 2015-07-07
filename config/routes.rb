@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   devise_scope :user do
     get 'admin', :to => 'devise/sessions#new'

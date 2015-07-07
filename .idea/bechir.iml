@@ -141,6 +141,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bullet (v4.14.7, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.10.5, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="byebug (v5.0.0, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ckeditor (v4.1.2, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="climate_control (v0.0.3, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cocaine (v0.5.7, RVM: ruby-2.2.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.0, RVM: ruby-2.2.1 [global]) [gem]" level="application" />

@@ -17,6 +17,7 @@ gem 'paperclip', '~> 4.3.0'
 gem 'modernizr-rails', '~> 2.7.1'
 gem 'friendly_id', '~> 5.1.0'
 gem 'acts-as-taggable-on', '~> 3.5.0'
+gem 'ckeditor', '~> 4.1.2'
 
 group :development, :test do
   gem 'better_errors', '~> 2.1.1'
