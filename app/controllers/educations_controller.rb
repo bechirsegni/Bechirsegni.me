@@ -2,6 +2,7 @@ class EducationsController < ApplicationController
     before_action :set_education, only: [:show, :edit, :update, :destroy]
     before_filter :authenticate_user!, except: [:index, :show]
     before_filter :correct_user, only: [:edit, :update, :destroy]
+    layout "admin", except: [:index]
 
     def index
       @educations = Education.all
@@ -20,7 +21,7 @@ class EducationsController < ApplicationController
     def create
       @education = current_user.educations.build(education_params)
       if @education.save!
-        redirect_to @education, notice: 'Education was successfully created.'
+        redirect_to resume_path, notice: 'Education was successfully created.'
       else
         render :new
       end
@@ -28,7 +29,7 @@ class EducationsController < ApplicationController
 
     def update
       if @education.update(education_params)
-        redirect_to @education, notice: 'Education was successfully updated.'
+        redirect_to resume_path, notice: 'Education was successfully updated.'
       else
         render :edit
       end
@@ -36,7 +37,7 @@ class EducationsController < ApplicationController
 
     def destroy
       @education.destroy
-      redirect_to educations_url, notice: 'Education was successfully destroyed.'
+      redirect_to resume_path, notice: 'Education was successfully destroyed.'
     end
 
     private

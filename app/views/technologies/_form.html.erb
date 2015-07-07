@@ -1,6 +1,13 @@
+
+<div class="panel-body">
 <%= form_for @technology do |f|%>
 <p>
   <%= f.label :skill%><br/><br/><br/>
-  <%= f.text_field :skill%>
+  <%= f.cktext_area :skill%>
+</p>
+      <br>
+<p>
+<%= f.submit 'Submit'%>
 </p>
 <%end%>
+</div>

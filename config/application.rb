@@ -28,6 +28,14 @@ module Bechir
       Disqus::defaults[:show_powered_by] = false
     end
 
+    config.to_prepare do
+      Devise::SessionsController.layout "admin"
+      Devise::RegistrationsController.layout "admin"
+      Devise::ConfirmationsController.layout "admin"
+      Devise::UnlocksController.layout "admin"
+      Devise::PasswordsController.layout "admin"
+    end
+
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'

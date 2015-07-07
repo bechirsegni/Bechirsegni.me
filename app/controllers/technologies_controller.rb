@@ -2,6 +2,7 @@ class TechnologiesController < ApplicationController
   before_action :set_technology, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index, :show]
   before_filter :correct_user, only: [:edit, :update, :destroy]
+  layout "admin", except: [:index]
 
   def index
     @technologies = Technology.all
@@ -20,7 +21,7 @@ class TechnologiesController < ApplicationController
   def create
     @technology = current_user.technologies.build(technology_params)
     if @technology.save!
-      redirect_to @technology, notice: 'technology was successfully created.'
+      redirect_to root_path, notice: 'technology was successfully created.'
     else
       render :new
     end
@@ -28,7 +29,7 @@ class TechnologiesController < ApplicationController
 
   def update
     if @technology.update(technology_params)
-      redirect_to @technology, notice: 'technology was successfully updated.'
+      redirect_to root_path, notice: 'technology was successfully updated.'
     else
       render :edit
     end
@@ -36,7 +37,7 @@ class TechnologiesController < ApplicationController
 
   def destroy
     @technology.destroy
-    redirect_to technologies_url, notice: 'technology was successfully destroyed.'
+    redirect_to root_path, notice: 'technology was successfully destroyed.'
   end
 
   private

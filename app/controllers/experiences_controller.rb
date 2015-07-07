@@ -2,6 +2,7 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index, :show]
   before_filter :correct_user, only: [:edit, :update, :destroy]
+  layout "admin", except: [:index]
 
   def index
     @experiences = Experience.all
@@ -20,7 +21,7 @@ class ExperiencesController < ApplicationController
   def create
     @experience = current_user.experiences.build(experience_params)
     if @experience.save!
-      redirect_to @experience, notice: 'experience was successfully created.'
+      redirect_to resume_path, notice: 'experience was successfully created.'
     else
       render :new
     end
@@ -28,7 +29,7 @@ class ExperiencesController < ApplicationController
 
   def update
     if @experience.update(experience_params)
-      redirect_to @experience, notice: 'experience was successfully updated.'
+      redirect_to resume_path, notice: 'experience was successfully updated.'
     else
       render :edit
     end
@@ -36,7 +37,7 @@ class ExperiencesController < ApplicationController
 
   def destroy
     @experience.destroy
-    redirect_to experiences_url, notice: 'experience was successfully destroyed.'
+    redirect_to resume_path, notice: 'experience was successfully destroyed.'
   end
 
   private

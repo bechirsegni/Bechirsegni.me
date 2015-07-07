@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
   before_filter :correct_user, only: [:edit, :update, :destroy]
 
+  layout "admin", except: [:index, :show]
   def index
     if params[:tag]
       @articles = Article.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 9)
