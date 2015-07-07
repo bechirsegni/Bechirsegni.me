@@ -23,6 +23,9 @@
       <li><a href="/about">About</a></li>
       <li><a href="/articles">Blog</a></li>
       <li><a href="/resume">Resume</a></li>
+      <%if user_signed_in?%>
+          <li><%= link_to 'Logout', logout_path%></li>
+      <%end%>
       <li><a href="mailto:bechirsegni@gmail.com" class="js_showContact"><i class="icon icon-bubbles"></i></a></li>
       <li><a href="#--search" class="js_showSearch"><i class="icon icon-search"></i></a></li>
     </ul>

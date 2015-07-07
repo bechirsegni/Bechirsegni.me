@@ -20,4 +20,11 @@ class Article < ActiveRecord::Base
     end
   end
 
+  def previous_post
+      self.class.where("id < ?", id).order(id: :desc).first
+  end
+
+  def next_post
+    self.class.where("id < ?", id).order(id: :asc).last
+  end
 end
