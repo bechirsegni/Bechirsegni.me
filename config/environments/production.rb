@@ -79,7 +79,4 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  set :stage, :production
-  server '22.22.22.2', user: 'deploy', roles: %w{web app}
-
 end
