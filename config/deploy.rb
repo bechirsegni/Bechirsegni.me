@@ -5,7 +5,7 @@ set :application, 'bechirsegni.me'
 set :repo_url, 'git@github.com:bechirsegni/bechirsegni.me.git'
 
 set :rvm_type, :user
-set :rvm_ruby_version, '2.0.0-p451'
+set :rvm_ruby_version, '2.2.1p85'
 
 set :pty, true
 set :sudo_prompt, ""
