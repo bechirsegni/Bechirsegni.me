@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: bechir_production
-  username: bechir
+  username: root
   password: <%= ENV['BECHIR_DATABASE_PASSWORD'] %>

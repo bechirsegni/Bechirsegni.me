@@ -21,6 +21,11 @@ gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'ckeditor', '~> 4.1.2'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'devise-bootstrap-views', '~> 0.0.5'
+gem 'capistrano', '~> 3.4.0'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
+gem 'capistrano-rvm', github: "capistrano/rvm"
+gem 'unicorn', '~> 4.9.0'
 
 group :development, :test do
   gem 'better_errors', '~> 2.1.1'

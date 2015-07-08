@@ -25,9 +25,9 @@
     <p><%= raw @article.description %></p>
 
     <div class="sharing">
-      <a target="_blank" title="Diesen Beitrag twittern" href="http://twitter.com/home?status=Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae sollicitudin tellus. Donec ornare ligula at risus gravida, nec luctus nunc pellentesque. Vestibulum auctor dolor eros, eu commodo leo porttitor id. Morbi in blandit dolor, at mattis sem. Mauris ac rutrum purus, vel malesuada magna. Suspendisse vel felis quis elit ornare congue ac ac sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. &mdash; http://oachoor.me/shell-script-to-simplify-life via @oachoor" class="icon icon-twitter"></a>
-      <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://oachoor.me/shell-script-to-simplify-life" class="icon icon-facebook"></a>
-      <a target="_blank" href="https://plus.google.com/share?url=http://oachoor.me/shell-script-to-simplify-life" class="icon icon-googleplus"></a>
+      <a target="_blank" title="<%=@article.title%>" href="http://twitter.com/home?status=<%=@article.title%>  &mdash; <%= request.original_url %> via @bechirsegni" class="icon icon-twitter"></a>
+      <a target="_blank" href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" class="icon icon-facebook"></a>
+      <a target="_blank" href="https://plus.google.com/share?url=<%= request.original_url %>" class="icon icon-googleplus"></a>
     </div>
     <br>
     <div id ="disqus_thread">
