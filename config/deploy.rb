@@ -1,20 +1,33 @@
+
+lock '3.4.0'
+
 set :application, 'bechirsegni.me'
 set :repo_url, 'git@github.com:bechirsegni/bechirsegni.me.git'
 
-set :deploy_to, '/home/deploy/myapp'
+set :rvm_type, :user
+set :rvm_ruby_version, '2.0.0-p451'
 
-set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :pty, true
+set :sudo_prompt, ""
+set :linked_files, %w{
+  config/database.yml
+  config/nginx.production.conf
+  config/secrets.yml
+  config/unicorn.rb
+  config/unicorn_init.sh
+}
+set :linked_dirs, %w{ tmp log }
+set :scm, :git
+set :tmp_dir, "/home/#{fetch(:application)}/tmp"
 
 namespace :deploy do
-
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute :touch, release_path.join('tmp/restart.txt')
+  %w{start stop restart}.each do |command|
+    desc "#{command} unicorn server"
+    task command do
+      on roles(:app) do
+        execute "service unicorn_#{fetch(:application)} #{command}"
+      end
     end
   end
-
-  after :publishing, 'deploy:restart'
-  after :finishing, 'deploy:cleanup'
+  after :finishing, :restart
 end

@@ -25,7 +25,10 @@ gem 'capistrano', '~> 3.4.0'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1.1'
 gem 'capistrano-rvm', github: "capistrano/rvm"
+
+group :production do
 gem 'unicorn', '~> 4.9.0'
+end
 
 group :development, :test do
   gem 'better_errors', '~> 2.1.1'

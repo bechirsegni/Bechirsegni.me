@@ -59,3 +59,13 @@
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+
+set :branch, :master
+set :deploy_to, '/home/bechirsegni/production'
+
+server '22.22.22.2',
+       user: 'deploy',
+       roles: %w{ web app db },
+       ssh_options: {
+           forward_agent: true
+       }
