@@ -970,7 +970,7 @@ a {
     letter-spacing: -5px
 }
 .js_mobileNavOpen .mobileNavWrapper {
-    .icon-googleplus: before -webkit-transform; translate(0, 0);
+    .icon-googleplus: before -webkit-transform;
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     -webkit-overflow-scrolling: touch;
