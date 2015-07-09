@@ -13,5 +13,4 @@
 /log/*
 !/log/.keep
 /tmp
-newrelic.yml
 public/*
