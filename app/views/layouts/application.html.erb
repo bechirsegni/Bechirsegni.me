@@ -19,16 +19,11 @@
   <%= csrf_meta_tags %>
 </head>
 
-<% if controller.controller_name == 'articles' || 'home#index' %>
-    <body data-no-turbolink>
-<% else %>
-    <body id="top" >
-<% end %>
-
+<body data-no-turbolink>
   <%= render 'layouts/common/nav'%>
   <%= yield %>
   <%= render 'layouts/common/footer'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= render :partial => 'layouts/common/g' if Rails.env == 'production' %>
-    </body>
+  <%= render 'layouts/common/g' %>
+</body>
 </html>
