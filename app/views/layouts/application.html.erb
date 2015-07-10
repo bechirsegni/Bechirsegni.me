@@ -19,11 +19,12 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body data-no-turbolink>
+<body id="top">
   <%= render 'layouts/common/nav'%>
   <%= yield %>
   <%= render 'layouts/common/footer'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= render 'layouts/common/g' %>
+  <%= render 'layouts/common/blogjs' %>
 </body>
 </html>
