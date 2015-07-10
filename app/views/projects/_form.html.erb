@@ -1,18 +1,17 @@
-<div class="panel-body"><%= form_for @education do |f| %>
+<div class="panel-body"><%= form_for @project,:html => { :multipart => true } do |f| %>
       <p><%= f.label :title %>
         <br><%= f.text_field :title %>
-      </p>
-      <p><%= f.label :duration %>
-        <br><%= f.text_field :duration %>
       </p>
       <p><%= f.label :description %>
         <br><%= f.cktext_area :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } } %>
       </p>
-      <p><%= f.label :university %>
-        <br><%= f.text_field :university %>
-      </p>
       <p><%= f.label :url %>
         <br><%= f.text_field :url %>
+      </p>
+      <p>
+        <%= f.label :logo %>
+        <br>
+        <%= f.file_field :logo %>
       </p>
       <p><%= f.submit %>
       </p><% end %>

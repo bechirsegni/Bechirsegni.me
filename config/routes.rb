@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :educations
   resources :experiences
   resources :technologies
+  resources :projects
 
   root 'home#index'
 

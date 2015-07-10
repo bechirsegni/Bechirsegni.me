@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150707063047) do
+ActiveRecord::Schema.define(version: 20150710093423) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150707063047) do
     t.datetime "updated_at"
   end
 
+  add_index "ckeditor_assets", ["assetable_id", "assetable_type"], name: "index_ckeditor_assets_on_assetable_id_and_assetable_type", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
@@ -138,6 +139,19 @@ ActiveRecord::Schema.define(version: 20150707063047) do
   end
 
   add_index "portfolios", ["admin_id"], name: "index_portfolios_on_admin_id", using: :btree
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "title",             limit: 255
+    t.text     "description",       limit: 65535
+    t.string   "url",               limit: 255
+    t.integer  "user_id",           limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "logo_file_name",    limit: 255
+    t.string   "logo_content_type", limit: 255
+    t.integer  "logo_file_size",    limit: 4
+    t.datetime "logo_updated_at"
+  end
 
   create_table "resumes", force: :cascade do |t|
     t.string   "big_title",         limit: 255
