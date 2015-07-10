@@ -1,29 +1,29 @@
-  <div class="panel-body">
-    <%= form_for @article,:html => { :multipart => true } do |f| %>
-        <p>
-          <%= f.label :title %><br>
-          <%= f.text_field :title %>
-        </p>
-        <div class="field">
-          <%= f.label :tag_list, "Tags (separated by commas)" %><br />
-          <%= f.text_field :tag_list %>
-        </div>
-        <p>
-          <%= f.label :duration %><br>
-          <%= f.text_field :duration %>
-        </p>
-        <p>
-          <%= f.label :description %><br>
-          <%= f.cktext_area :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } } %>
-        <p>
-          <%= f.label :image %><br>
-          <%= f.file_field :image %>
-        </p>
+<div class="panel-body">
+  <%= form_for @article,:html => { :multipart => true } do |f| %>
+      <p>
+        <%= f.label :title %><br>
+        <%= f.text_field :title %>
+      </p>
+      <div class="field">
+        <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+        <%= f.text_field :tag_list %>
+      </div>
+      <p>
+        <%= f.label :duration %><br>
+        <%= f.text_field :duration %>
+      </p>
+      <p>
+        <%= f.label :description %><br>
+        <%= f.cktext_area :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400 } } %>
+      <p>
+        <%= f.label :image %><br>
+        <%= f.file_field :image %>
+      </p>
 
-        <p>
-          <%= f.submit %>
-        </p>
-    <% end %>
-  </div>
+      <p>
+        <%= f.submit %>
+      </p>
+  <% end %>
+</div>
 
 

@@ -2,12 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title><%= yield(:title) %> | Bechir Segni</title>
+  <title><%= yield(:title) %> | Bechir Segni
+  </title>
   <meta name="author" content="Bechir Segni - http://bechirsegni.me">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0">
-  <%= favicon_link_tag 'favicon.png' %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag :modernizr, media: 'all', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0"><%= favicon_link_tag 'favicon.png' %><%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %><%= javascript_include_tag :modernizr, media: 'all', 'data-turbolinks-track' => true %>
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bechir Segni — Junior RoR. Web Developer. — @oachoor">
   <meta property="og:description" content="This is the portfolio, blog and digital playground from Bechir Segni.">
@@ -15,16 +13,14 @@
   <meta property="og:site_name" content="Bechir Segni — Junior RoR. Web Developer. — @bechirsegni">
   <meta property="og:image" content="#">
   <meta name="twitter:site" content="@bechirsegni">
-  <meta name="twitter:card" content="summary">
-  <%= csrf_meta_tags %>
+  <meta name="twitter:card" content="summary"><%= csrf_meta_tags %>
 </head>
-
 <body id="top">
-  <%= render 'layouts/common/nav'%>
-  <%= yield %>
-  <%= render 'layouts/common/footer'%>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= render 'layouts/common/g' %>
-  <%= render 'layouts/common/blogjs' %>
+<%= render 'layouts/common/nav'%>
+<%= yield %>
+<%= render 'layouts/common/footer'%>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= render 'layouts/common/g' %>
+<%= render 'layouts/common/blogjs' %>
 </body>
 </html>

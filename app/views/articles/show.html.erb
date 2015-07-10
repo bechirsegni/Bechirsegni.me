@@ -7,21 +7,21 @@
     <p>
       Reading duration : <strong><%= @article.duration %></strong><br>
       <%if @article.tag_list.present?%>
-      Tags :
-      <strong>
-        <%= raw @article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
-        <%end%>
+          Tags :
+          <strong>
+            <%= raw @article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+      <%end%>
       </strong>
       <br>
-       <%if user_signed_in?%>
-        <%= raw link_to 'Destroy', @article , method: :delete, data: { confirm: 'Are you sure?' } %> , <%= link_to 'Edit', edit_article_path%>
+      <%if user_signed_in?%>
+          <%= raw link_to 'Destroy', @article , method: :delete, data: { confirm: 'Are you sure?' } %> , <%= link_to 'Edit', edit_article_path%>
       <%end%>
       <br><br>
     </p>
     <%if @article.image.present?%>
-    <%=  image_tag @article.image.url(:normal) ,style: ' display: block; margin-left: auto; margin-right: auto; max-width:100%;' %>
+        <%=  image_tag @article.image.url(:normal) ,style: ' display: block; margin-left: auto; margin-right: auto; max-width:100%;' %>
     <%end%>
-        <br><br>
+    <br><br>
     <p><%= raw @article.description %></p>
 
     <div class="sharing">
@@ -36,14 +36,14 @@
   </article>
   <div class="pagination">
     <div class="alignleft">
-    <%= link_to("Previous Post", @article.previous_post) if @article.previous_post do %>
+      <%= link_to("Previous Post", @article.previous_post) if @article.previous_post do %>
           <i class="icon lessMargin icon-arrow-left"></i>
       <%end%>
     </div>
     <div class="alignright">
-    <%= link_to("Next Post", @article.next_post) if @article.next_post do %>
+      <%= link_to("Next Post", @article.next_post) if @article.next_post do %>
           <i class="icon lessMargin icon-arrow-right"></i>
-     <%end%>
+      <%end%>
     </div>
   </div>
 </section>

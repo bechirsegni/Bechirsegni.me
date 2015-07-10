@@ -9,8 +9,8 @@
         <li class="wow animated zoomIn" data-wow-delay=".15s">
           <%= link_to  article do %>
               <span class="date"><%="#{time_ago_in_words(article.created_at)} ago"%></span>
-            <h2><%=article.title%></h2>
-            <div class="readMore">Read Article<i class="icon icon-arrow-right"></i></div>
+              <h2><%=article.title%></h2>
+              <div class="readMore">Read Article<i class="icon icon-arrow-right"></i></div>
           <%end%>
         </li>
     <%end%>

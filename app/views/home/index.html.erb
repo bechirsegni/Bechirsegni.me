@@ -1,28 +1,33 @@
 <% provide(:title, "Home") %>
 <section class="welcomeWrapper" >
-    <figure style="background-image: url(<%=image_url 'slider'%>);" >
-      <figcaption>
-        <h2><span>Developer<br>Design Engineer<br>Football</span></h2>
-        <h3>Football. Cocktails. Ice-cream, Apple. High Tech.<br>I love what I do and I will do whatever it takes to further my career. </h3>
-      </figcaption>
-    </figure>
-    <a href="#article" class="scrollDown" id="article">
-      <i class="icon icon-arrow-bottom"></i>My latest articles
-    </a>
-  </section>    <section class="articleArchiv">
-  <ul class="sameHeight">
-    <%@articles.each do |article|%>
-    <li class="wow animated zoomIn" data-wow-delay=".15s">
-        <%= link_to  article do %>
-      <span class="date"><%="#{time_ago_in_words(article.created_at)} ago"%></span>
-        <h2><%=article.title%></h2>
-        <div class="readMore">Read Article<i class="icon icon-arrow-right"></i></div>
-      <%end%>
-    </li>
-    <%end%>
-  </ul>
-    <%= link_to 'More Articles', articles_path ,class:'getMoreButton'%>
+  <figure style="background-image: url(<%=image_url 'slider'%>);" >
+    <figcaption>
+      <h2>
+        <span>Developer
+            <br>Design Engineer
+            <br>Football
+        </span>
+      </h2>
+      <h3>Football. Cocktails. Ice-cream, Apple. High Tech.
+        <br>I love what I do and I will do whatever it takes to further my career.
+      </h3>
+    </figcaption>
+  </figure>
+  <a href="#article" class="scrollDown" id="article">
+    <i class="icon icon-arrow-bottom"></i>My latest articles</a>
+</section>
+<section class="articleArchiv">
+  <ul class="sameHeight"><%@articles.each do |article|%>
+        <li class="wow animated zoomIn" data-wow-delay=".15s"><%= link_to  article do %>
+              <span class="date"><%="#{time_ago_in_words(article.created_at)} ago"%> </span>
+              <h2><%=article.title%>
+              </h2>
+              <div class="readMore">Read Article
+                <i class="icon icon-arrow-right"></i>
+              </div><%end%>
+        </li><%end%>
+  </ul><%= link_to 'More Articles', articles_path ,class:'getMoreButton'%>
   <a href="https://twitter.com/bechirsegni" target="_blank" class="scrollDown LatestTweets">
     <i class="icon icon-twitter"></i>
   </a>
-  </section>
+</section>

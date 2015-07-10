@@ -1,58 +1,61 @@
 <% provide(:title, "Resume") %>
 <div class="pageHeadline" style="background-image:url('<%=image_url 'mac.jpg'%>'); width:100%;">
-  <h2><span style="color: #ffffff">My Skill Sets</span></h2>
-  <%= link_to 'Download My Resume', articles_path ,style:'font-size: 35px;'%>
-
+  <h2>
+    <span style="color: #ffffff">My Skill Sets</span>
+  </h2><%= link_to 'Download My Resume', articles_path ,style:'font-size: 35px;'%>
 </div>
 <section class="aboutWrapper">
   <section class="experience">
     <div class="headline">PROFESSIONAL EXPERIENCE</div>
-    <ul>
-      <%@experiences.reverse_order!.each do |experience|%>
-      <li>
-        <div class="company">
-          <h2><%= experience.company%></h2>
-          <h3><%= experience.duration%></h3>
-        </div>
-        <div class="position">
-          <h2><%= experience.title%></h2>
-          <p><%= experience.description%></p>
-          <a href="http://<%= experience.url%>" target="_blank"><%= experience.url%></a>
-        </div>
-      </li>
-      <%end%>
+    <ul><%@experiences.reverse_order!.each do |experience|%>
+          <li>
+            <div class="company">
+              <h2><%= experience.company%>
+              </h2>
+              <h3><%= experience.duration%>
+              </h3>
+            </div>
+            <div class="position">
+              <h2><%= experience.title%>
+              </h2>
+              <p><%= experience.description%>
+              </p>
+              <a href="http://<%= experience.url%>" target="_blank"><%= experience.url%>
+              </a>
+            </div>
+          </li><%end%>
     </ul>
   </section>
-
   <section class="experience">
     <div class="headline">EDUCATION & CERTIFICATIONS</div>
-    <ul>
-      <%@educations.reverse_order!.each do |education|%>
-      <li>
-        <div class="company">
-          <h2 title="National Conservatory of Arts and Crafts"><%= education.university%></h2>
-          <h3><%= education.duration%></h3>
-        </div>
-        <div class="position">
-          <h2><%= education.title%></h2>
-          <p><%= education.description%></p>
-          <a href="http://<%= education.url%>" target="_blank"><%= education.url%></a>
-        </div>
-      </li>
-      <%end%>
+    <ul><%@educations.reverse_order!.each do |education|%>
+          <li>
+            <div class="company">
+              <h2 title="National Conservatory of Arts and Crafts"><%= education.university%>
+              </h2>
+              <h3><%= education.duration%>
+              </h3>
+            </div>
+            <div class="position">
+              <h2><%= education.title%>
+              </h2>
+              <p><%= education.description%>
+              </p>
+              <a href="http://<%= education.url%>" target="_blank"><%= education.url%>
+              </a>
+            </div>
+          </li><%end%>
     </ul>
   </section>
-
   <section class="likes">
-    <div class="headline">Technologies</div>
-    <%@technologies.each do |t|%>
-    <p><%=t.skill%></p>
-    <%end%>
+    <div class="headline">Technologies</div><%@technologies.each do |t|%>
+        <p><%=t.skill%>
+        </p><%end%>
   </section>
-
   <section class="articleArchiv">
     <a href="https://twitter.com/bechirsegni" target="_blank" class="scrollDown LatestTweets">
       <i class="icon icon-twitter"></i>
-    </a>        </section>
+    </a>
+  </section>
 </section>
 
