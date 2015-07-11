@@ -59,7 +59,8 @@
       </li>
       <li>
       <a href="/projects">Projects</a>
-      </li><%if user_signed_in?%>
+      </li>
+      <%if user_signed_in?%>
           <li><%= link_to 'Logout', logout_path%>
           </li><%end%>
       <li>
