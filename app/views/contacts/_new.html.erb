@@ -1,0 +1,17 @@
+<%= form_for @contact , class:'contact-form' do  |f|%>
+    <div class="contact-form input">
+      <%= f.text_field :email, :required => true, placeholder:'Email Address *',class:'contact-form input'%>
+    </div>
+    <br>
+    <div class="contact-form input">
+      <%= f.text_field :subject,:required => true, placeholder:'Subject *',class:'contact-form input'%>
+    </div>
+    <br>
+    <div class="contact-form text-area">
+      <%= f.text_area :message, :required => true, placeholder:'Message *',class:'contact-form text-area'%>
+    </div>
+    <br>
+    <div class="contact-form button">
+      <%= f.submit 'Submit', class:'contact-form button'%>
+    </div>
+<%end%>

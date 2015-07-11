@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   resources :technologies
   resources :projects
 
+  resources 'contacts', only: [:new, :create]
+
   root 'home#index'
 
 end

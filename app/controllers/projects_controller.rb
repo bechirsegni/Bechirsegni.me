@@ -6,6 +6,8 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    @contact = Contact.new(params[:contact_form])
+    @contact.request = request
   end
 
   def show

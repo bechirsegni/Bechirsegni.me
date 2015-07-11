@@ -26,6 +26,7 @@ gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1.1'
 gem 'capistrano-rvm', github: "capistrano/rvm"
 gem 'rack-cache', '~> 1.2'
+gem 'mail_form', '~> 1.5.1'
 
 group :production do
 gem 'unicorn', '~> 4.9.0'

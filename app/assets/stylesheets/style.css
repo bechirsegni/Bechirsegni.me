@@ -2389,3 +2389,62 @@ pre {
 .xml .hljs-cdata {
     opacity: .5
 }
+
+.contact-form {
+    text-align: center;
+}
+
+.contact-form .input {
+    width: 65%;
+    padding: 12px;
+    margin: 0;
+    border: 1px solid #CCC;
+    background: #FAFAFA none repeat scroll 0% 0%;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+    text-align: left;
+
+}
+
+.contact-form .text-area{
+    font-size: 12px;
+    padding: 12px;
+    margin: 0;
+    border: 1px solid #CCC;
+    background: #FAFAFA none repeat scroll 0% 0%;
+    font-family: sans-serif;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: 95px;
+    width: 65%;
+    text-align: left;
+}
+
+.contact-form .button {
+    color: #FFF;
+    background-color: #1A1A1A;
+    border-color: #1A1A1A;
+    width: 250px;
+    height: 50px;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.contact-text {
+    font-size: 25px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
