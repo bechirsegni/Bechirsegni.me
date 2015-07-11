@@ -50,7 +50,7 @@ class ExperiencesController < ApplicationController
   end
 
   def correct_user
-    @experience = current_user.experience.find_by_id(params[:id])
+    @experience = current_user.experiences.find_by_id(params[:id])
     redirect_to experiences_path, notice: "Not authorized to edit this education" if @experience.nil?
   end
 end
