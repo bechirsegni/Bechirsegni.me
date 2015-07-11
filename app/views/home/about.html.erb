@@ -23,7 +23,7 @@
   </section>
   <section class="likes">
     <div class="headline">Technologies</div><%@technologies.each do |t|%>
-        <p><%=t.skill%>
+        <p><%=raw t.skill%>
         </p><%end%>
   </section>
   <section class="articleArchiv">
