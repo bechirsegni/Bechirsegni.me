@@ -29,9 +29,9 @@
         </a>
       </li>
     </ul>
-    <ul class="mobile">
-      <li>
-        <a href="#mobileNav" class="js_showMobileNav">
+    <ul class="mobile" data-no-turbolinks>
+      <li data-no-turbolinks >
+        <a href="#mobileNav" class="js_showMobileNav"  data-no-turbolinks>
           <i class="icon icon-menu"></i>
         </a>
       </li>
@@ -45,14 +45,14 @@
       </a><%= text_field_tag :search, params[:search],class:'searchInput' ,placeholder:'Search...' do %>
           <i class="icon icon-close"></i><%end%><% submit_tag "Search" %><% end %>
 </section>
-<div class="mobileNavWrapper">
-  <nav class="navi">
-    <ul>
+<div class="mobileNavWrapper"  data-no-turbolinks>
+  <nav class="navi"  data-no-turbolinks>
+    <ul data-no-turbolinks>
       <li>
         <a href="/about">About Me</a>
       </li>
       <li>
-        <a href="/articles">Blog</a>
+        <a href="/articles" data-no-turbolinks>Blog</a>
       </li>
       <li>
         <a href="/resume">Resume</a>
@@ -69,7 +69,7 @@
         </a>
       </li>
       <li>
-        <a href="#--search" class="js_showSearch js_hideMobileNav">
+        <a href="#--search" class="js_showSearch js_hideMobileNav"  data-no-turbolinks>
           <i class="icon icon-search"></i>
         </a>
       </li>
