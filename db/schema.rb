@@ -13,24 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150710093423) do
 
-  create_table "admins", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
-
   create_table "articles", force: :cascade do |t|
     t.string   "title",              limit: 255
     t.string   "duration",           limit: 255
@@ -47,20 +29,6 @@ ActiveRecord::Schema.define(version: 20150710093423) do
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
 
-  create_table "blogs", force: :cascade do |t|
-    t.string   "title",              limit: 255
-    t.date     "date"
-    t.string   "category",           limit: 255
-    t.text     "description",        limit: 65535
-    t.integer  "admin_id",           limit: 4
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.string   "image_file_name",    limit: 255
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_file_size",    limit: 4
-    t.datetime "image_updated_at"
-  end
-
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
     t.string   "data_content_type", limit: 255
@@ -74,7 +42,6 @@ ActiveRecord::Schema.define(version: 20150710093423) do
     t.datetime "updated_at"
   end
 
-  add_index "ckeditor_assets", ["assetable_id", "assetable_type"], name: "index_ckeditor_assets_on_assetable_id_and_assetable_type", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
@@ -104,42 +71,6 @@ ActiveRecord::Schema.define(version: 20150710093423) do
 
   add_index "experiences", ["user_id"], name: "index_experiences_on_user_id", using: :btree
 
-  create_table "intros", force: :cascade do |t|
-    t.string   "title",                  limit: 255
-    t.text     "description",            limit: 65535
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
-    t.string   "image_file_name",        limit: 255
-    t.string   "image_content_type",     limit: 255
-    t.integer  "image_file_size",        limit: 4
-    t.datetime "image_updated_at"
-    t.string   "signature_file_name",    limit: 255
-    t.string   "signature_content_type", limit: 255
-    t.integer  "signature_file_size",    limit: 4
-    t.datetime "signature_updated_at"
-    t.integer  "admin_id",               limit: 4
-  end
-
-  add_index "intros", ["admin_id"], name: "index_intros_on_admin_id", using: :btree
-  add_index "intros", ["title"], name: "index_intros_on_title", using: :btree
-
-  create_table "portfolios", force: :cascade do |t|
-    t.string   "title",              limit: 255
-    t.date     "date"
-    t.string   "client",             limit: 255
-    t.text     "description",        limit: 65535
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.string   "image_file_name",    limit: 255
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_file_size",    limit: 4
-    t.datetime "image_updated_at"
-    t.string   "sub_title",          limit: 255
-    t.integer  "admin_id",           limit: 4
-  end
-
-  add_index "portfolios", ["admin_id"], name: "index_portfolios_on_admin_id", using: :btree
-
   create_table "projects", force: :cascade do |t|
     t.string   "title",             limit: 255
     t.text     "description",       limit: 65535
@@ -152,38 +83,6 @@ ActiveRecord::Schema.define(version: 20150710093423) do
     t.integer  "logo_file_size",    limit: 4
     t.datetime "logo_updated_at"
   end
-
-  create_table "resumes", force: :cascade do |t|
-    t.string   "big_title",         limit: 255
-    t.string   "date",              limit: 255
-    t.string   "place",             limit: 255
-    t.string   "address",           limit: 255
-    t.string   "title",             limit: 255
-    t.text     "description",       limit: 65535
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.string   "logo_file_name",    limit: 255
-    t.string   "logo_content_type", limit: 255
-    t.integer  "logo_file_size",    limit: 4
-    t.datetime "logo_updated_at"
-    t.integer  "admin_id",          limit: 4
-  end
-
-  add_index "resumes", ["admin_id"], name: "index_resumes_on_admin_id", using: :btree
-
-  create_table "services", force: :cascade do |t|
-    t.string   "tilte",             limit: 255
-    t.text     "description",       limit: 65535
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.string   "logo_file_name",    limit: 255
-    t.string   "logo_content_type", limit: 255
-    t.integer  "logo_file_size",    limit: 4
-    t.datetime "logo_updated_at"
-    t.integer  "admin_id",          limit: 4
-  end
-
-  add_index "services", ["admin_id"], name: "index_services_on_admin_id", using: :btree
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id",        limit: 4
